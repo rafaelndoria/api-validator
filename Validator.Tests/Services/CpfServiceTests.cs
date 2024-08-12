@@ -79,7 +79,7 @@ namespace Validator.Tests.Services
         public void InputCpfValid_Executed_ReturnTrue()
         {
             // Arrange
-            var cpf = "47220886837";
+            var cpf = "";
             var cpfService = new CpfService();
 
             // Act
