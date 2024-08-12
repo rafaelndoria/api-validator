@@ -17,14 +17,14 @@ namespace Validator.Application.Services.Implementations
                     return false;
 
                 var nineDigitsCpf = cpf.Substring(0, 9);
-                var verifyingDigit = cpf.Substring(9, 2);
+                var verifyingDigits = cpf.Substring(9, 2);
 
-                string resultVerifyingDigit = "";
+                string resultVerifyingDigits = "";
 
-                resultVerifyingDigit = GetFirstVerifyingDigit(nineDigitsCpf);
-                resultVerifyingDigit += GetSecondVerifyingDigit(nineDigitsCpf, resultVerifyingDigit);
+                resultVerifyingDigits = GetFirstVerifyingDigit(nineDigitsCpf);
+                resultVerifyingDigits += GetSecondVerifyingDigit(nineDigitsCpf, resultVerifyingDigit);
 
-                if (resultVerifyingDigit != verifyingDigit)
+                if (resultVerifyingDigits != verifyingDigits)
                     return false;
 
                 return true;
